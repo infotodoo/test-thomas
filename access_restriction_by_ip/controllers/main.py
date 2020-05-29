@@ -51,7 +51,6 @@ class Home(main.Home):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            #values['error'] = _("Not allowed to login from this IP")
             return ('<html><br /><br /><br /><h1 style="text-align: center;">IP DO NOT ALLOWED</h1></html>')#request.render('web.login', values)
         else:
             if request.httprequest.method == 'POST':

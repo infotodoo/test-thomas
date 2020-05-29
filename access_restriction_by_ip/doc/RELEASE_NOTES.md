@@ -17,4 +17,4 @@
 #### 28.05.2020
 #### Version 13.0.2
 #### CHANGE ACCESS TO LOGIN
-#### Use a correct IP address or Die.
+#### Use a correct IP address or Die. 'By Todoo'
