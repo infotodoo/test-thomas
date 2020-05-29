@@ -52,7 +52,7 @@ class Home(main.Home):
 
         if not ip_address in ip_list:
             values['error'] = _("Not allowed to login from this IP")
-            return request.render('web.login', values)
+            return 'IP DO NOT ALLOWED'#request.render('web.login', values)
         else:
             if request.httprequest.method == 'POST':
                 old_uid = request.uid
