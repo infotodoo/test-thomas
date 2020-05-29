@@ -38,7 +38,7 @@ class  Website( Website):
 
         if not ip_address in ip_list:
             #return 'IP DO NOT ALLOWED'
-            response = redirect("www.thomasgregandsons.com")
+            response = redirect("https://www.thomasgregandsons.com/en/")
             return response
         else:
             homepage = request.website.homepage_id
@@ -65,7 +65,7 @@ class  Website( Website):
 
         if not ip_address in ip_list:
             #return 'IP DO NOT ALLOWED'
-            response = redirect("www.thomasgregandsons.com")
+            response = redirect(https://www.thomasgregandsons.com/en/)
             return response
         else:
             response = super(Website, self).web_login(redirect=redirect, *args, **kw)
