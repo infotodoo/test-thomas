@@ -7,7 +7,7 @@
             <field name="priority" eval="16" />
             <field name="arch" type="xml">
                 <tree string="Allowed IPs" editable="bottom">
-                    <field name="name" readonly="True"/>
+                    <field name="name" />
                     <field name="ip_address" />
                 </tree>
             </field>
