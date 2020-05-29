@@ -37,7 +37,9 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return ('<html><br /><br /><br /><h1 style="text-align: center;">IP DO NOT ALLOWED</h1></html>')
+            return ('<html><br /><br /><br /><br /><h1 style=\
+                    "text-align: center;">{}<br /><br />IP DO NOT ALLOWED</h1></html>\
+                        '.format(ip_address))
 
         else:
             homepage = request.website.homepage_id
@@ -63,7 +65,9 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return ('<html><br /><br /><br /><h1 style="text-align: center;">IP DO NOT ALLOWED</h1></html>')
+            return ('<html><br /><br /><br /><br /><h1 style=\
+                    "text-align: center;">{}<br /><br />IP DO NOT ALLOWED</h1></html>\
+                        '.format(ip_address))
 
         else:
             response = super(Website, self).web_login(redirect=redirect, *args, **kw)

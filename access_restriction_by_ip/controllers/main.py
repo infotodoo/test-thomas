@@ -51,7 +51,9 @@ class Home(main.Home):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return ('<html><br /><br /><br /><h1 style="text-align: center;">IP DO NOT ALLOWED</h1></html>')#request.render('web.login', values)
+            return ('<html><br /><br /><br /><br /><h1 style=\
+                    "text-align: center;">{}<br /><br />IP DO NOT ALLOWED</h1></html>\
+                        '.format(ip_address))
         else:
             if request.httprequest.method == 'POST':
                 old_uid = request.uid
