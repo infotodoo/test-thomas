@@ -37,9 +37,9 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            #return 'IP DO NOT ALLOWED'
-            response = redirect("https://www.thomasgregandsons.com/en/")
-            return response
+            return 'IP DO NOT ALLOWED'
+            # response = redirect("https://www.thomasgregandsons.com/en/")
+            # return response
         else:
             homepage = request.website.homepage_id
             if homepage and (homepage.sudo().is_visible or request.env.user.has_group('base.group_user')) and homepage.url != '/':
@@ -64,9 +64,9 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            #return 'IP DO NOT ALLOWED'
-            response = redirect(https://www.thomasgregandsons.com/en/)
-            return response
+            return 'IP DO NOT ALLOWED'
+            # response = redirect(https://www.thomasgregandsons.com/en/)
+            # return response
         else:
             response = super(Website, self).web_login(redirect=redirect, *args, **kw)
             if not redirect and request.params['login_success']:
