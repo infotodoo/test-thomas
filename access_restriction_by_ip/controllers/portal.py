@@ -37,7 +37,7 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return 'IP DO NOT ALLOWED'
+            return ('HTTP/1.0 200 OK\r\nContent-type:text/html;charset=utf8\r\n\r\n<html><body>IP DO NOT ALLOWED</body></html>')
             # response = redirect("https://www.thomasgregandsons.com/en/")
             # return response
         else:
@@ -64,7 +64,7 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return 'IP DO NOT ALLOWED'
+            return ('IP DO NOT ALLOWED')
             # response = redirect(https://www.thomasgregandsons.com/en/)
             # return response
         else:

@@ -31,6 +31,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/allowed_ips_view.xml',
+        'views/access_website.xml',
     ],
     'images': ['static/description/banner.png'],
     'demo': [],
