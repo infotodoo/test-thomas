@@ -83,6 +83,6 @@ class Home(main.Home):
         if not ip_address in ip_list:
             return 'IP DO NOT ALLOWED'
 
-        if request.session.uid and not request.env['res.users'].sudo().browse(request.session.uid).has_group('base.group_user'):
-            return http.local_redirect('/my', query=request.params, keep_hash=True)
-        return super(Home, self).index(*args, **kw)
+        # if request.session.uid and not request.env['res.users'].sudo().browse(request.session.uid).has_group('base.group_user'):
+        #     return http.local_redirect('/my', query=request.params, keep_hash=True)
+        # return super(Home, self).index(*args, **kw)
