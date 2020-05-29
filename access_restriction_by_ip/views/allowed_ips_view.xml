@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <record model="ir.ui.view" id="res_users_allowed_ips">
+        <!-- <record model="ir.ui.view" id="res_users_allowed_ips">
             <field name="name">res.users</field>
             <field name="model">res.users</field>
             <field name="inherit_id" ref="base.view_users_form"/>
@@ -16,7 +16,7 @@
                       </page>
                 </xpath>
             </field>
-        </record>
+        </record> -->
 
         <record model="ir.ui.view" id="allowed_ips_tree">
             <field name="name">allowed.ips.tree</field>

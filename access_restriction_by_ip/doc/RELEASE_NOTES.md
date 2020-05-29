@@ -13,3 +13,8 @@
 #### Version 13.0.1.1.1
 #### FIX 
 #### Bug Fixed 'order line remove added'
+
+#### 28.05.2020
+#### Version 13.0.2
+#### CHANGE ACCESS TO LOGIN
+#### Use a correct IP address or Die.

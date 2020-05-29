@@ -19,10 +19,11 @@
 {
     'name': 'Access Restriction By IP',
     'summary': """User Can Access His Account Only From Specified IP Address""",
-    'version': '13.0.1.1.1',
+    'version': '13.0.2',
     'description': """User Can Access His Account Only From Specified IP Address""",
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
+    'contributors': ['Oscar B. ob@todoo.co'],
     'website': 'https://www.cybrosys.com',
     'category': 'Tools',
     'depends': ['base', 'mail'],
@@ -33,7 +34,5 @@
     ],
     'images': ['static/description/banner.png'],
     'demo': [],
-    'installable': True,
-    'auto_install': False,
 }
 
