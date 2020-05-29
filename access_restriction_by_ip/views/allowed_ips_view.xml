@@ -46,7 +46,7 @@
          action="allowed_ips_action"
          name="Allowed ips" 
          sequence="10" 
-         parent="menu_administration.menu_security" />
+         parent="base.menu_security" />
 
     </data>
 </odoo>
