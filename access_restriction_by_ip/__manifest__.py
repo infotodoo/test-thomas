@@ -25,7 +25,7 @@
     'company': 'Cybrosys Techno Solutions',
     'contributors': ['Oscar B. ob@todoo.co'],
     'website': 'https://www.cybrosys.com',
-    'category': 'Tools',
+    'category': 'Technical Settings',
     'depends': ['base', 'mail'],
     'license': 'AGPL-3',
     'data': [
