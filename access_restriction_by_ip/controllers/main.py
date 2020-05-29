@@ -59,8 +59,8 @@ class Home(main.Home):
                 # ip_address = request.httprequest.environ['REMOTE_ADDR']
 
                 if request.params['login']:
-                    user_rec = request.env['res.users'].sudo().search(
-                        [('login', '=', request.params['login'])])
+                    # user_rec = request.env['res.users'].sudo().search(
+                    #     [('login', '=', request.params['login'])])
                     # if user_rec.allowed_ips:
                     #     ip_list = []
                     #     for rec in user_rec.allowed_ips:

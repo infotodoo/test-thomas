@@ -40,8 +40,8 @@ class Home(main.Home):
                 old_uid = request.uid
 
                 if request.params['login']:
-                    user_rec = request.env['res.users'].sudo().search(
-                        [('login', '=', request.params['login'])])
+                    # user_rec = request.env['res.users'].sudo().search(
+                    #     [('login', '=', request.params['login'])])
                     try:
                         uid = request.session.authenticate(request.session.db,
                                                         request.params[
@@ -55,5 +55,4 @@ class Home(main.Home):
                         request.uid = old_uid
                         if e.args == odoo.exceptions.AccessDenied().args:
                             values['error'] = _("Wrong login/password")
-
             return request.render('web.login', values)
