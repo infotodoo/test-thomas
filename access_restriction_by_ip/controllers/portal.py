@@ -24,6 +24,7 @@ import odoo
 import odoo.modules.registry
 from odoo.tools.translate import _
 from odoo import http
+from werkzeug.utils import redirect
 
 
 class  Website( Website):
@@ -36,7 +37,9 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return 'IP DO NOT ALLOWED'
+            #return 'IP DO NOT ALLOWED'
+            response = redirect("www.thomasgregandsons.com")
+            return response
         else:
             homepage = request.website.homepage_id
             if homepage and (homepage.sudo().is_visible or request.env.user.has_group('base.group_user')) and homepage.url != '/':
@@ -61,7 +64,9 @@ class  Website( Website):
             ip_list.append(ip.ip_address)
 
         if not ip_address in ip_list:
-            return 'IP DO NOT ALLOWED'
+            #return 'IP DO NOT ALLOWED'
+            response = redirect("www.thomasgregandsons.com")
+            return response
         else:
             response = super(Website, self).web_login(redirect=redirect, *args, **kw)
             if not redirect and request.params['login_success']:
