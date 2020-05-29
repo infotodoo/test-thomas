@@ -1,5 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-  <data>
+    <data>
+
+        <record model="ir.ui.view" id="allowed_ips_tree">
+            <field name="name">allowed.ips.tree</field>
+            <field name="model">allowed.ips</field>
+            <field name="priority" eval="16" />
+            <field name="arch" type="xml">
+                <tree string="Allowed IPs" editable="bottom">
+                    <field name="name" readonly="True"/>
+                    <field name="ip_address" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="allowed_ips_action" model="ir.actions.act_window">
+            <field name="name">Allowed IP</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">allowed.ips</field>
+            <field name="view_id" ref="allowed_ips_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    ADD a new IP
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="allowed_ips_menu"
+         action="allowed_ips_action"
+         name="Allowed ips" 
+         sequence="10" 
+         parent="menu_administration.menu_security" />
+
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="access_thomas.list">
