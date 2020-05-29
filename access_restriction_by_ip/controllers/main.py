@@ -75,14 +75,14 @@ class Home(main.Home):
 
     @http.route()
     def index(self, *args, **kw):
+        ip_address = request.httprequest.environ['REMOTE_ADDR']
+        ip_list = []
+        for ip in request.env['allowed.ips'].sudo().search([]):
+            ip_list.append(ip.ip_address)
+
+        if not ip_address in ip_list:
+            return 'IP DO NOT ALLOWED'
+
         if request.session.uid and not request.env['res.users'].sudo().browse(request.session.uid).has_group('base.group_user'):
-            ip_address = request.httprequest.environ['REMOTE_ADDR']
-            ip_list = []
-            for ip in request.env['allowed.ips'].sudo().search([]):
-                ip_list.append(ip.ip_address)
-
-            if not ip_address in ip_list:
-                return 'IP DO NOT ALLOWED'
-
             return http.local_redirect('/my', query=request.params, keep_hash=True)
         return super(Home, self).index(*args, **kw)
