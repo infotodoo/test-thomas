@@ -24,7 +24,9 @@ import odoo
 import odoo.modules.registry
 from odoo.tools.translate import _
 from odoo import http
+import logging
 
+_logger = logging.getLogger(__name__)
 
 class Home(main.Home):
 
@@ -46,6 +48,8 @@ class Home(main.Home):
 
         ip_address = request.httprequest.environ['REMOTE_ADDR']
         ip_list = []
+        message = dict(request.httprequest.environ)
+        _logger.info(message)
 
         for ip in request.env['allowed.ips'].sudo().search([]):
             ip_list.append(ip.ip_address)

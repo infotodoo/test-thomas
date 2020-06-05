@@ -26,7 +26,7 @@
     'contributors': ['Oscar B. ob@todoo.co'],
     'website': 'https://www.cybrosys.com',
     'category': 'Technical Settings',
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail', 'website'],
     'license': 'AGPL-3',
     'data': [
         'security/ir.model.access.csv',
