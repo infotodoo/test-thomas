@@ -44,7 +44,7 @@ class Home(main.Home):
                 for ip in request.env['allowed.ips'].sudo().search([]):
                     ip_list.append(ip.ip_address)
 
-                if not ip_address in ip_list or not block:
+                if not ip_address in ip_list and block:
                     return ('<html><br /><br /><br /><br /><h1 style=\
                             "text-align: center;">{}<br /><br />IP DO NOT ALLOWED</h1></html>\
                                 '.format(ip_address))
@@ -68,7 +68,7 @@ class Home(main.Home):
         for ip in request.env['allowed.ips'].sudo().search([]):
             ip_list.append(ip.ip_address)
 
-        if not ip_address in ip_list or not block:
+        if not ip_address in ip_list and block:
             return ('<html><br /><br /><br /><br /><h1 style=\
                     "text-align: center;">{}<br /><br />IP DO NOT ALLOWED</h1></html>\
                         '.format(ip_address))
