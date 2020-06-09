@@ -18,3 +18,8 @@
 #### Version 13.0.2
 #### CHANGE ACCESS TO LOGIN
 #### Use a correct IP address or Die. 'By Todoo'
+
+#### 28.05.2020
+#### Version 13.0.2.1
+#### ADD BLOCK FOR APP IOS/ANDROID
+#### Use a correct IP address or Die. 'By Todoo'
