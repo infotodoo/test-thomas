@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
+
+        <record id="res_company_block_ip" model="ir.ui.view">
+            <field name="name">res.company.form.block.ip</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='social_media']" position="before">
+                    <group string="Access by IP" groups="base.group_no_one">
+                        <field name="block_ips"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="allowed_ips_tree">
             <field name="name">allowed.ips.tree</field>
             <field name="model">allowed.ips</field>
