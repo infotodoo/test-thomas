@@ -22,6 +22,7 @@ from odoo import models, fields
 
 class AllowedIPs(models.Model):
     _name = 'allowed.ips'
+    _description = 'Allowes IPS'
 
     ip_address = fields.Char(string='Allowed IP')
     name = fields.Char('Name')
