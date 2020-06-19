@@ -16,5 +16,5 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import main, portal
+from . import main
 

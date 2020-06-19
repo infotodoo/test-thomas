@@ -17,6 +17,5 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import allowed_ips
-
+from . import allowed_ips, res_company
 

@@ -19,8 +19,8 @@
 {
     'name': 'Access Restriction By IP',
     'summary': """All Users Can Access His Account Only From Specified IP Address""",
-    'version': '13.0.2',
-    'description': """All Users Can Access His Account Only From Specified IP Address""",
+    'version': '13.0.2.1',
+    'description': """All Users Can Access His Account Only From Specified IP Address (Mobile APP included)""",
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'contributors': ['Oscar B. ob@todoo.co'],
